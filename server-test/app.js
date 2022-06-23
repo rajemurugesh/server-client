@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-// const router = require('./Routes/emp');
+const router = require('./Routes/emp');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 
 app.use(express.json())
@@ -13,11 +13,11 @@ app.use(cors())
 
 
 app.get('/', (req, res)=>{
-    res.send("App is running fine")
+    res.send("App is running fine successfully....")
 });
 
 
-// app.use("/emp", router);
+ app.use("/emp", router);
 
 const db = "mongodb+srv://Rajeswari:raje1992@cluster1.wm1nl.mongodb.net/server-test"
 
